@@ -14,32 +14,30 @@
         }
     </style>
 </head>
-<body class="gradient-bg min-h-screen lg:h-screen lg:overflow-hidden">
-    <div class="min-h-screen flex flex-col p-2 sm:p-4">
-        <!-- Header -->
-        <div class="text-center mb-4 sm:mb-6">
-            <div class="bg-white rounded-lg sm:rounded-xl px-4 sm:px-8 py-4 sm:py-6 shadow-lg">
-                <h1 class="text-xl sm:text-2xl lg:text-4xl font-bold text-gray-800 mb-1 tracking-wide">Generator Perkenalan Diri</h1>
-                <div class="flex flex-col sm:flex-row items-center justify-center">
-                    <span class="text-gray-600 text-sm sm:text-lg font-medium">Universitas Terbuka</span>
-                    <span class="hidden sm:inline mx-2 text-gray-400">•</span>
-                    <span class="text-gray-600 text-sm sm:text-lg">Sistem Tutorial Online</span>
-                </div>
-                <div class="w-16 sm:w-24 h-1 bg-gradient-to-r from-blue-400 to-blue-600 rounded-full mx-auto mt-2 sm:mt-3"></div>
-            </div>
+<body class="gradient-bg h-screen overflow-hidden flex flex-col">
+    <!-- Header -->
+    <div class="text-center py-4">
+        <h1 class="text-lg sm:text-xl lg:text-2xl font-bold text-gray-800 mb-1 tracking-wide">Generator Perkenalan Diri</h1>
+        <div class="flex flex-col sm:flex-row items-center justify-center">
+            <span class="text-gray-700 text-xs sm:text-sm font-medium">Universitas Terbuka</span>
+            <span class="hidden sm:inline mx-2 text-gray-500">•</span>
+            <span class="text-gray-700 text-xs sm:text-sm">Sistem Tutorial Online</span>
         </div>
+        <div class="w-12 sm:w-16 h-0.5 bg-gradient-to-r from-blue-400 to-blue-600 rounded-full mx-auto mt-1"></div>
+    </div>
 
-        <div class="flex-1 flex flex-col lg:grid lg:grid-cols-3 gap-4 min-h-0">
-            <!-- Form Input - Kolom 1 -->
-            <div class="bg-white rounded-lg shadow-xl p-3 sm:p-4 mb-4 lg:mb-0 overflow-y-auto">
-                <h2 class="text-base sm:text-lg font-semibold text-gray-800 mb-3 sm:mb-4">Data Perkenalan</h2>
+    <div class="flex-1 flex justify-center items-center p-2 sm:p-4">
+        <div class="w-full max-w-5xl h-full flex flex-col lg:flex-row gap-2 min-h-0">
+            <!-- Form Input Section -->
+            <div class="bg-white rounded-lg shadow-xl p-2 sm:p-3 lg:w-2/5 overflow-y-auto">
+                <h2 class="text-sm sm:text-base font-semibold text-gray-800 mb-2">Data Perkenalan</h2>
                 
-                <form id="introForm" class="space-y-3">
+                <form id="introForm" class="space-y-2">
                     <!-- Row 1: Waktu & Sapaan -->
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                    <div class="grid grid-cols-2 gap-2">
                         <div>
                             <label class="block text-xs sm:text-sm font-medium text-gray-700 mb-1">Waktu</label>
-                            <select id="waktu" class="w-full p-3 sm:p-2 text-sm border border-gray-300 rounded focus:ring-1 focus:ring-blue-500">
+                            <select id="waktu" class="w-full p-2 text-xs sm:text-sm border border-gray-300 rounded focus:ring-1 focus:ring-blue-500">
                                 <option value="Pagi">Pagi</option>
                                 <option value="Siang">Siang</option>
                                 <option value="Sore">Sore</option>
@@ -48,7 +46,7 @@
                         </div>
                         <div>
                             <label class="block text-xs sm:text-sm font-medium text-gray-700 mb-1">Sapaan</label>
-                            <select id="sapaan" class="w-full p-3 sm:p-2 text-sm border border-gray-300 rounded focus:ring-1 focus:ring-blue-500">
+                            <select id="sapaan" class="w-full p-2 text-xs sm:text-sm border border-gray-300 rounded focus:ring-1 focus:ring-blue-500">
                                 <option value="Bapak">Bapak</option>
                                 <option value="Ibu">Ibu</option>
                             </select>
@@ -58,31 +56,31 @@
                     <!-- Nama Tutor -->
                     <div>
                         <label class="block text-xs sm:text-sm font-medium text-gray-700 mb-1">Nama Tutor</label>
-                        <input type="text" id="namaTutor" placeholder="Nama tutor/pengajar" class="w-full p-3 sm:p-2 text-sm border border-gray-300 rounded focus:ring-1 focus:ring-blue-500">
+                        <input type="text" id="namaTutor" placeholder="Nama tutor/pengajar" class="w-full p-2 text-xs sm:text-sm border border-gray-300 rounded focus:ring-1 focus:ring-blue-500">
                     </div>
 
                     <!-- Mata Kuliah -->
                     <div>
                         <label class="block text-xs sm:text-sm font-medium text-gray-700 mb-1">Mata Kuliah</label>
-                        <input type="text" id="matkul" placeholder="Nama mata kuliah" class="w-full p-3 sm:p-2 text-sm border border-gray-300 rounded focus:ring-1 focus:ring-blue-500">
+                        <input type="text" id="matkul" placeholder="Nama mata kuliah" class="w-full p-2 text-xs sm:text-sm border border-gray-300 rounded focus:ring-1 focus:ring-blue-500">
                     </div>
 
                     <!-- Row 2: Nama & NIM -->
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                    <div class="grid grid-cols-2 gap-2">
                         <div>
                             <label class="block text-xs sm:text-sm font-medium text-gray-700 mb-1">Nama Lengkap</label>
-                            <input type="text" id="namaMahasiswa" placeholder="Nama Anda" value="Ajit Prasetiyo" class="w-full p-3 sm:p-2 text-sm border border-gray-300 rounded focus:ring-1 focus:ring-blue-500">
+                            <input type="text" id="namaMahasiswa" placeholder="Nama Anda" value="Ajit Prasetiyo" class="w-full p-2 text-xs sm:text-sm border border-gray-300 rounded focus:ring-1 focus:ring-blue-500">
                         </div>
                         <div>
                             <label class="block text-xs sm:text-sm font-medium text-gray-700 mb-1">NIM</label>
-                            <input type="text" id="nim" placeholder="NIM" value="057172707" class="w-full p-3 sm:p-2 text-sm border border-gray-300 rounded focus:ring-1 focus:ring-blue-500">
+                            <input type="text" id="nim" placeholder="NIM" value="057172707" class="w-full p-2 text-xs sm:text-sm border border-gray-300 rounded focus:ring-1 focus:ring-blue-500">
                         </div>
                     </div>
 
                     <!-- UPBJJ -->
                     <div>
                         <label class="block text-xs sm:text-sm font-medium text-gray-700 mb-1">UPBJJ</label>
-                        <select id="upbjj" class="w-full p-3 sm:p-2 text-sm border border-gray-300 rounded focus:ring-1 focus:ring-blue-500">
+                        <select id="upbjj" class="w-full p-2 text-xs sm:text-sm border border-gray-300 rounded focus:ring-1 focus:ring-blue-500">
                             <option value="UPBJJ UT Jakarta">UPBJJ UT Jakarta</option>
                             <option value="UPBJJ UT Bandung">UPBJJ UT Bandung</option>
                             <option value="UPBJJ UT Surabaya">UPBJJ UT Surabaya</option>
@@ -99,7 +97,7 @@
                     <!-- Fakultas -->
                     <div>
                         <label class="block text-xs sm:text-sm font-medium text-gray-700 mb-1">Fakultas</label>
-                        <select id="fakultas" class="w-full p-3 sm:p-2 text-sm border border-gray-300 rounded focus:ring-1 focus:ring-blue-500">
+                        <select id="fakultas" class="w-full p-2 text-xs sm:text-sm border border-gray-300 rounded focus:ring-1 focus:ring-blue-500">
                             <option value="Fakultas Sains dan Teknologi">Fakultas Sains dan Teknologi</option>
                             <option value="Fakultas Ekonomi">Fakultas Ekonomi</option>
                             <option value="Fakultas Hukum, Ilmu Sosial dan Ilmu Politik">Fakultas Hukum, Ilmu Sosial dan Ilmu Politik</option>
@@ -110,35 +108,30 @@
                     <!-- Program Studi -->
                     <div>
                         <label class="block text-xs sm:text-sm font-medium text-gray-700 mb-1">Program Studi</label>
-                        <input type="text" id="prodi" placeholder="Program studi" value="Sistem Informasi" class="w-full p-3 sm:p-2 text-sm border border-gray-300 rounded focus:ring-1 focus:ring-blue-500">
+                        <input type="text" id="prodi" placeholder="Program studi" value="Sistem Informasi" class="w-full p-2 text-xs sm:text-sm border border-gray-300 rounded focus:ring-1 focus:ring-blue-500">
                     </div>
                 </form>
             </div>
 
-            <!-- Hasil - Kolom 2 & 3 -->
-            <div class="lg:col-span-2 bg-white rounded-lg shadow-xl p-3 sm:p-4 flex flex-col min-h-[300px] lg:min-h-0">
-                <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2">
-                    <h2 class="text-base sm:text-lg font-semibold text-gray-800">Hasil Perkenalan</h2>
-                    <button id="copyBtn" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 sm:px-3 sm:py-1 rounded text-sm transition duration-200 w-full sm:w-auto">
+            <!-- Hasil Section -->
+            <div class="bg-white rounded-lg shadow-xl p-2 sm:p-3 flex-1 min-h-0 flex flex-col">
+                <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-2 gap-1 flex-shrink-0">
+                    <h2 class="text-sm sm:text-base font-semibold text-gray-800">Hasil Perkenalan</h2>
+                    <button id="copyBtn" class="bg-green-600 hover:bg-green-700 text-white px-3 py-1 rounded text-xs sm:text-sm transition duration-200 w-full sm:w-auto">
                         📄 Salin
                     </button>
                 </div>
                 
-                <div id="hasil" class="flex-1 bg-gray-50 p-3 sm:p-4 rounded border overflow-y-auto whitespace-pre-wrap text-sm leading-relaxed">
+                <div id="hasil" class="bg-gray-50 p-2 sm:p-3 rounded border flex-1 overflow-y-auto whitespace-pre-wrap text-xs sm:text-sm leading-relaxed">
                     <span class="text-gray-500 italic">Isi form di atas untuk generate perkenalan...</span>
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- Footer -->
-        <div class="mt-4 text-center">
-            <div class="bg-white rounded-lg px-3 sm:px-4 py-2 shadow-md">
-                <p class="text-gray-800 text-xs sm:text-sm font-medium">Created by AJIT PRASETIYO © 2025</p>
-                <p class="text-gray-600 text-xs mt-1">
-                    Hak Cipta Dilindungi. Dilarang menyalin, mendistribusikan, atau menggunakan tanpa izin tertulis dari pembuat.
-                </p>
-            </div>
-        </div>
+    <!-- Footer -->
+    <div class="text-center py-4">
+        <p class="text-gray-700 text-xs font-medium">Created by AJIT PRASETIYO © 2025 - Hak Cipta Dilindungi.</p>
     </div>
 
     <script>
@@ -223,5 +216,5 @@ Wassalamualaikum Warahmatullahi Wabarakatuh.`;
         // Generate initial preview
         generatePerkenalan();
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'989259fc13489daa',t:'MTc1OTU1NjUwMC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'98926f7af6909daa',t:'MTc1OTU1NzM4MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
