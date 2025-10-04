@@ -35,10 +35,10 @@
                         <div>
                             <label class="block text-xs sm:text-sm font-medium text-gray-700 mb-1">Waktu</label>
                             <select id="waktu" class="w-full p-2 text-xs sm:text-sm border border-gray-300 rounded focus:ring-1 focus:ring-blue-500">
-                                <option value="Pagi">pagi</option>
-                                <option value="Siang">siang</option>
-                                <option value="Sore">sore</option>
-                                <option value="Malam">malam</option>
+                                <option value="Pagi">Pagi</option>
+                                <option value="Siang">Siang</option>
+                                <option value="Sore">Sore</option>
+                                <option value="Malam">Malam</option>
                             </select>
                         </div>
                         <div>
@@ -145,13 +145,12 @@
             }
 
             const perkenalan = `Assalamualaikum Warahmatullahi Wabarakatuh,
+Selamat ${waktu} ${sapaan} ${namaTutor} selaku tutor pada mata kuliah ${matkul.toLowerCase()}.
 
-Selamat ${waktu.toLowerCase()} ${sapaan} ${namaTutor} selaku tutor pada mata kuliah ${matkul}.
-Perkenalkan, nama saya ${namaMahasiswa} dengan NIM ${nim}. Saya berasal dari ${upbjj}, ${fakultas}, Program Studi ${prodi} - Semester Ganjil 2025.
-
-Saya sangat senang bisa bergabung dalam kelas ini. Semoga melalui tuton ini saya dapat belajar dengan baik, memahami materi, serta berkembang bersama teman-teman lainnya. Mohon bimbingan dan arahan dari ${sapaan}.
-
+Perkenalkan, nama saya ${namaMahasiswa} dengan NIM ${nim}. Saya berasal dari ${upbjj}, ${fakultas}, Program Studi ${prodi} semester ganjil 2025.
+Saya sangat senang bisa bergabung dalam kelas ini. Semoga melalui Tuton ini saya dapat belajar dengan baik, memahami materi, serta berkembang bersama teman-teman lainnya. Mohon bimbingan dan arahan dari ${sapaan}.
 Terima kasih.
+
 Wassalamualaikum Warahmatullahi Wabarakatuh.`;
 
             hasil.textContent = perkenalan;
