@@ -128,6 +128,16 @@
         const hasil = document.getElementById('hasil');
         const copyBtn = document.getElementById('copyBtn');
 
+        // Fungsi untuk mengubah format teks menjadi Capitalize Each Word
+        function capitalizeEachWord(str) {
+            if (!str) return '';
+            return str
+                .toLowerCase()
+                .split(' ')
+                .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+                .join(' ');
+        }
+
         function generatePerkenalan() {
             const waktu = document.getElementById('waktu').value;
             const namaTutor = document.getElementById('namaTutor').value;
@@ -144,8 +154,11 @@
                 return;
             }
 
+            // Gunakan fungsi capitalizeEachWord pada nama tutor
+            const formattedNamaTutor = capitalizeEachWord(namaTutor);
+
             const perkenalan = `Assalamualaikum Warahmatullahi Wabarakatuh,
-Selamat ${waktu} ${sapaan} ${namaTutor} selaku tutor pada mata kuliah ${matkul.toLowerCase()}.
+Selamat ${waktu} ${sapaan} ${formattedNamaTutor} selaku tutor pada mata kuliah ${matkul.toLowerCase()}.
 
 Perkenalkan, nama saya ${namaMahasiswa} dengan NIM ${nim}. Saya berasal dari ${upbjj}, ${fakultas}, Program Studi ${prodi} semester ganjil 2025.
 Saya sangat senang bisa bergabung dalam kelas ini. Semoga melalui Tuton ini saya dapat belajar dengan baik, memahami materi, serta berkembang bersama teman-teman lainnya. Mohon bimbingan dan arahan dari ${sapaan}.
